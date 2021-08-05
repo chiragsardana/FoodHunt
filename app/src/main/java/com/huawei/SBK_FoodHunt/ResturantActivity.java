@@ -66,7 +66,7 @@ public class ResturantActivity extends AppCompatActivity {
 
     private void setData(Resturant resturant) {
         name.setText(resturant.getName());
-        String ownerText = "By " + resturant.getOwner();
+        String ownerText = resturant.getOwner();
         owner.setText(ownerText);
         description.setText(resturant.getDescription());
         Glide.with(this).asBitmap().load(resturant.getImageUrl()).into(farmImage);

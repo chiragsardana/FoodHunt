@@ -42,7 +42,7 @@ public class ResturantRecyclerViewAdapter extends RecyclerView.Adapter<Resturant
     public void onBindViewHolder(ViewHolder holder, int position) {
         Log.d(TAG, "onBindViewHolder: Called");
         holder.name.setText(resturants.get(position).getName());
-        String ownerText = "by " + resturants.get(position).getOwner();
+        String ownerText = resturants.get(position).getOwner();
         holder.owner.setText(ownerText);
         Glide.with(mContext)
                 .asBitmap()
